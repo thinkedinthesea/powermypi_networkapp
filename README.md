@@ -5,4 +5,5 @@ Python script that interact with **POWERMYPI** Android app<br/><br/>
 ****
 Take control of your Raspberry Pi board. <br/>
 Send command to your RPI or whatever *NIX board.<br/>
-Power Off, Reboot and 4 customizable commands.<br/>
+Power Off, Reboot and 4 customizable commands.<br/><br/>
+# Istructions for the Server part:<br/>
