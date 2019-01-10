@@ -9,5 +9,6 @@ Power Off, Reboot and 4 customizable commands.<br/><br/>
 # Istructions for the Server part:<br/>
 - Open a terminal (root)<br/>
 ```
-mkdir /home/<user>/powermypi
+cd /home/pi
+git clone https://github.com/thinkedinthesea/powermypi_networkapp.git
 ```
