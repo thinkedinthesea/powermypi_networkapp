@@ -19,5 +19,5 @@ sudo crontab -e
 ```
 @reboot python3 /home/pi/powermypi_networkapp/powermypi_networkapp.py &
 ```
-- Once you've added that line, press ```control-x```, ```y``` and ```enter``` to exit nano.
-- It should say ```crontab: installing new crontab``` assuming you saved the crontab successfully.
+- Once you've added that line, press ```control-x```, ```y``` and ```enter``` to exit nano.<br/>
+- It should say ```crontab: installing new crontab``` assuming you saved the crontab successfully.<br/>
