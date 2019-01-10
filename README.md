@@ -29,4 +29,10 @@ nano /home/pi/powermypi_networkapp/log
 - Check for the string ```Application Started``` followed by IP and port.
 - If no network the log says ```Network Error. Quitting...```<br/>
 - **Now insert IP and Port on the Android App and enjoy**<br/><br/>
-# Istructions for the Server part:<br/>
+# Changing Default Port:<br/>
+- Open a terminal<br/>
+```
+cd /home/pi/powermypi_networkapp
+nano powermypi_networkapp.py
+```
+- Scroll down to the line 20 ```myPort=1234``` and change to any unused port<br/>
