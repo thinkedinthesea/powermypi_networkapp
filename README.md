@@ -15,4 +15,7 @@ cd powermypi_networkapp
 chmod 777 powermypi_networkapp.py
 sudo crontab -e
 ```
-- At the end of file insert this line<br/>
+- Scroll all the way down (using the down arrow key) and type, on the last line, the following:<br/>
+```
+@reboot python3 /home/pi/powermypi_networkapp/powermypi_networkapp.py &
+```
