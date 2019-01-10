@@ -28,4 +28,5 @@ nano /home/pi/powermypi_networkapp/log
 ```
 - Check for the string ```Application Started``` followed by IP and port.
 - If no network the log says ```Network Error. Quitting...```<br/>
-- **Now insert IP and Port on the Android App and enjoy**
+- **Now insert IP and Port on the Android App and enjoy**<br/><br/>
+# Istructions for the Server part:<br/>
