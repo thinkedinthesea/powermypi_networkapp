@@ -9,12 +9,27 @@
 import time
 from socket import *
 import os
+import logging
+from errno import ENETUNREACH
+import sys
+#
+logging.basicConfig(filename="/home/pi/powermypi_networkapp/log",level=logging.DEBUG,format="%(asctime)s %(message)s")
+logging.debug("Application Started")
+#
 time.sleep(10)
-myPort=12345
-s=socket(AF_INET, SOCK_DGRAM)
-s.connect(("8.8.8.8",80))
+#
+myPort=1234
+try:
+    s=socket(AF_INET, SOCK_DGRAM)
+    s.connect(("8.8.8.8",80))
+except IOError as e:
+    if e.errno == ENETUNREACH:
+        logging.debug("Network Error. Quitting...")
+        sys.exit(0)
+#
 ip_address = s.getsockname()[0]
 print(ip_address)
+logging.debug("Network IP:"+ip_address+" Port:"+str(myPort))
 ss = socket(AF_INET, SOCK_STREAM)
 ss.bind((ip_address, myPort))
 ss.listen(5)
@@ -32,13 +47,17 @@ while True:
             os.system("sudo reboot")
             break
         if (stri=="COMMAND1\n"):
-            print("COMMAND1")
+            logging.debug("COMMAND1")
+            #add your command here
         if (stri=="COMMAND2\n"):
-            print("COMMAND2")
+            logging.debug("COMMAND2")
+            #add your command here
         if (stri=="COMMAND3\n"):
-            print("COMMAND3")
+            logging.debug("COMMAND3")
+            #add your command here
         if (stri=="COMMAND4\n"):
-            print("COMMAND4")
+            logging.debug("COMMAND4")
+            #add your command here
         if (stri=="INFO\n"):
             print("INFO")
             connection.sendall(stringOut.encode())
