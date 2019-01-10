@@ -36,3 +36,5 @@ cd /home/pi/powermypi_networkapp
 nano powermypi_networkapp.py
 ```
 - Scroll down to the line 20 ```myPort=1234``` and change to any unused port<br/>
+- Once you've added that line, press ```control-x```, ```y``` and ```enter``` to exit nano.<br/>
+- Reboot for changes to take effect.<br/>
