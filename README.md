@@ -8,6 +8,6 @@ Send command to your RPI or whatever *NIX board.<br/>
 Power Off, Reboot and 4 customizable commands.<br/><br/>
 # Istructions for the Server part:<br/>
 - Open a terminal (root)<br/>
-'''bash
+```
 mkdir /home/<user>/powermypi
-'''
+```
