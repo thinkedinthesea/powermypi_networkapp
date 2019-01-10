@@ -13,10 +13,9 @@ import logging
 from errno import ENETUNREACH
 import sys
 #
+time.sleep(15)
 logging.basicConfig(filename="/home/pi/powermypi_networkapp/log",level=logging.DEBUG,format="%(asctime)s %(message)s")
 logging.debug("Application Started")
-#
-time.sleep(10)
 #
 myPort=1234
 try:
@@ -28,7 +27,7 @@ except IOError as e:
         sys.exit(0)
 #
 ip_address = s.getsockname()[0]
-print(ip_address)
+#print(ip_address)
 logging.debug("Network IP:"+ip_address+" Port:"+str(myPort))
 ss = socket(AF_INET, SOCK_STREAM)
 ss.bind((ip_address, myPort))
