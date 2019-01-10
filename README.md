@@ -21,3 +21,10 @@ sudo crontab -e
 ```
 - Once you've added that line, press ```control-x```, ```y``` and ```enter``` to exit nano.<br/>
 - It should say ```crontab: installing new crontab``` assuming you saved the crontab successfully.<br/>
+- Now reboot your Board.<br/>
+- Open a terminal and type:<br/>
+```
+nano /home/pi/powermypi_networkapp/log
+```
+- Check for the string ```Application Started``` follow by IP and port.
+- If no network the log says ```Network Error. Quitting...```
